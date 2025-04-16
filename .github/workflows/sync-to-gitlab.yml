@@ -25,7 +25,7 @@ jobs:
       - name: Add GitLab Remote
         run: |
           PROJECT_NAME=$(echo ${{github.repository}} | cut -d'/' -f 2)
-          git remote add gitlab https://oauth2:${{ secrets.GITLAB_TOKEN }}@gitlab.tools.gebeya.io/biniyam_gebeya/${PROJECT_NAME}.git
+          git remote add gitlab https://oauth2:${{ secrets.GITLAB_TOKEN }}@gitlab.tools.gebeya.io/biniyam_gebeya/{PROJECT_NAME}
 
       - name: Push Changes to GitLab
         run: |
